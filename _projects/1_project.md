@@ -2,8 +2,7 @@
 layout: page
 title: Machine Learning Analysis for Imaging Mass Cytometry Data
 description: A machine learning pipeline for the predictive analysis of IMC data, including a novel augmentation approach.
-img: ![cell_vA1](https://user-images.githubusercontent.com/21988487/184982075-ed6c429e-9c2c-4f35-ae54-d3ef8774f362.png)
-
+img: assets/img/cell-map.PNG
 importance: 1
 category: work
 ---
