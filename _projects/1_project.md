@@ -60,13 +60,13 @@ Once we have the overall protein expression information for each cell, we can us
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/cell seg.png" title="cell seg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/cell seg.png" title="cell seg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/phenoclus.png" title="phenograph map" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/phenoclus.png" title="phenograph map" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/cellannot.png" title="cell annotation" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/cellannot.png" title="cell annotation" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -76,10 +76,10 @@ Once we have the overall protein expression information for each cell, we can us
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="phenograph heatmap" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="phenograph heatmap" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/cell-map.PNG" title="cell map" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/cell-map.PNG" title="cell map" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
