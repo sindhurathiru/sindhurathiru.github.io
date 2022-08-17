@@ -2,7 +2,7 @@
 layout: page
 title: TITAN
 description: Processing & analysis software for IMC data
-img: assets/img/logo v2.PNG
+img: assets/img/logo-v2.PNG
 importance: 1
 category: research
 ---
