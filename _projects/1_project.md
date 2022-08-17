@@ -12,7 +12,7 @@ category: work
 Both tumour cells and the tumor microenvironemnt (TME) are important considerations when evaluating various cancers at the tissue level. With time, cancer cells evolve and are able to evade destruction by cells of the immune system, resulting in the formation of a tumor. Because of this, it's important to obtain a better understanding of the various cell types within the TME, since they may contribute to tumor progression. 
 
 <div class="row">
-    <div class="col-sm-12 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/tme.jpg" title="tme" class="full-width rounded z-depth-1" %}
     </div>
 </div>
@@ -92,7 +92,7 @@ To validate this augmentation method, we projected features representing the pro
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/aug-graph.PNG" title="augmentation graph" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/augmentation_vA6.png" title="augmentation graph" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -116,8 +116,23 @@ We used different classification models to evaluate TME association with various
     Heat map showing the significance (ANOVA F-scores) of the various cell proportions (x-axis) as features for the given clinical parameter (y-axis). Values are normalized between 0 and 1.
 </div>
 
+The heat map is grouped by the level of significance of features for the different labels and the scores are normalized for better visualization. Higher scores indicate higher associations of the specific cell types with the given label.
 
-We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the the optimal number of ranked features, along with the top performing classifier, for each label. Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
+The heat map shows that B cells were relevant to the  resence of TLS. Notably, TLS are primarily composed of B cells and thus, this association appears to have biological relevance. In addition, CD8+ T and actin+ cells were recognized to be relevant to recurrence risk. In a past study, increased frequency of CD8+ T  cells at the invasive margin in MIBC was found to be associated with prolonged overall survival. Actin+ has shown to play a role in cancer progression through modulation of gene expression. It's typically found mostly in muscle cells, including the thick muscular wall of the bladder, so these results are not entirely unexpected given that the definition of MIBC is tumor spread into the muscle layer of the bladder wall. Finally, we found that CD163+ macrophages were relevant to prior BCG exposure. BCG is an immunotherapy given to patients with non-muscle  invasive bladder cancer (NMIBC), often a precursor to MIBC. There is evidence that CD163+ macrophages in NMIBC are associated with BCG failure, and it is notable that patients in our cohort with prior BCG exposure for their NMIBC diagnosis experienced BCG failure since they progressed to MIBC.
+
+
+We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the optimal number of ranked features, along with the top performing classifier, for each label:
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ml-table.png" title="fscore heatmap" class="full-width rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Association of TME with different clinical features (%).
+</div>
+
+Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
 
 
 
