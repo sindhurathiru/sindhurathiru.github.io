@@ -60,13 +60,17 @@ Once we have the overall protein expression information for each cell, we can us
     in order to get the protein expression for individual cells, we first segment the data to create the cell mask. From there, we use PhenoGraph to cluster cells that have similar expression levels. Using that, we then annotate the cell types based on the protein expression of each cluster.
 </div>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="overview" class="img-fluid rounded z-depth-1" %}
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="phenograph heatmap" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cell-map.PNG" title="cell map" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Once the cell mask is created for each sample, PhenoGraph clustering is used to group cells with similar protein expressions (channels).
+    PhenoGraph clustering uses the cell masks to group cells with similar protein expressions (left). That information is then used to annotate each of the different cell types in a sample (right).
 </div>
 
 <h2>Data Augmentation</h2>
@@ -92,6 +96,16 @@ We used different classification models to evaluate TME association with various
 
 
 
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="heatmap" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Once the cell mask is created for each sample, PhenoGraph clustering is used to group cells with similar protein expressions (channels).
+</div>
 
 
 
