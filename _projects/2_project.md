@@ -39,7 +39,7 @@ Although these software are the standard for analysis of IMC data, they are lack
 
 <h2>Implementation</h2>
 
-TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/). 
+TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/) - for the purpose of addressing pitfalls and inefficienceis in the existing workflows for IMC analysis. It's compatible with both multi-channel text files and single-channel TIFF images of IMC data as inputs and provides an end-to-end pipeline for exploration and quantification of IMC data in a single environment. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -50,9 +50,21 @@ TITAN was developed within a free open-source software platform - [3D Slicer](ht
     User interface of TITAN. Sections of TITAN's user interface are shown in: a) Visualization tab and b) Analysis tab. c) TITAN can be added directly from the Extensions store in 3D Slicer.
 </div>
 
+TITAN uses several well-documented Python libraries including [Python Imaging Library](https://pillow.readthedocs.io/en/stable/), [SimpleITK](https://pypi.org/project/SimpleITK/), [matplotlib](https://matplotlib.org/), and [scikit-learn](https://scikit-learn.org/stable/).
 
+TITAN is open-source and publicly available through its [Github repository](https://github.com/SlicerMicro/Slicer-TITAN) along with detailed documentation and tutorials.
 
+<h3>Overview</h3>
 
+TITAN's functionality is divided into 3 main categories:
+
+<ol>
+    <li>Visualization</li>
+    <li>Segmentation</li>
+    <li>Analysis</li>
+</ol>
+
+After importing IMC data in text or image format, the user can view individual protein channels as well as an overlay of multiple channels at once.
 
 
 
