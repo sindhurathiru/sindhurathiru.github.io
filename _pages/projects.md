@@ -5,7 +5,7 @@ permalink: /projects/
 description: The following projects demonstrate various analysis methodologies with respect to imaging mass cytometry data - a new advancement in tissue imaging that is quickly gaining wider usage since its recent launch. The data output of this technology is extensive and complex, however studies using this data are typically bounded to simple statistical analyses since the target audience of this technology is biologists with limited computational knowledge. 
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [research]
 horizontal: false
 ---
 

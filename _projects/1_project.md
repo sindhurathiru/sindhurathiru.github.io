@@ -3,14 +3,14 @@ layout: page
 title: Cancer Prognosis Prediction
 description: A machine learning pipeline for the predictive analysis of IMC data, including a novel augmentation approach.
 img: assets/img/cell-map.PNG
-importance: 1
-category: work
+importance: 2
+category: research
 ---
 
 <style>
 cover{
     /* object-fit:cover; */
-    width: 150px
+    width: 150 px
 }
 </style>
 
