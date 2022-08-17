@@ -15,7 +15,8 @@ cover{
 </style>
 
 <blockquote>
-    This work was presented and published in ![2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).
+    This work was presented and published in 
+    [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).
 </blockquote>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bdf36SwT3Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
