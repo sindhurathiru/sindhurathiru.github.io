@@ -57,11 +57,11 @@ Once we have the overall protein expression information for each cell, we can us
     </div>
 </div>
 <div class="caption">
-    in order to get the protein expression for individual cells, we first segment the data to create the cell mask. From there, we use PhenoGraph to cluster cells that have similar expression levels. Using that, we then annotate the cell types based on the protein expression of each cluster.
+    In order to get the protein expression for individual cells, we first segment the data to create the cell mask. From there, we use PhenoGraph to cluster cells that have similar expression levels. Using that, we then annotate the cell types based on the protein expression of each cluster.
 </div>
 
 
-<div class="row justify-content-sm-center">
+<div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/phenograph heatmap v2.png" title="phenograph heatmap" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -77,7 +77,7 @@ Once we have the overall protein expression information for each cell, we can us
 
 With medical data specifically, it has been a longstanding challenge to acquire data from large numbers of subjects. While ML requires data points in the thousands, most patient cohorts are only in the tens. Therefore, proper data augmentation becomes crucial to enable appropriate learning from the data. In IMC images, the protein expressions are measured for each individual cell in the image. For each cell, the averaged pixel intensities within the cell corresponds to its protein expression. Therefore, normal image augmenting techniques like rotations and flips would not work. Though a rotation or flip would change the spatial location of the pixels in relation to the whole image, the pixel intensities within each cell would remain unchanged. Thus, a proper IMC data augmentation technique is necessary.
 
-We developed a novel cell-level spatial augmentation approach called <i>sector elimination</i>. For each tissue sample, we suggest to exclude all cells within a randomly selected 30 degree spatial pie section of the images. This process was randomly repeated 50 times for each of the tissue samples.
+We developed a novel cell-level spatial augmentation approach called <i>sector elimination</i>. For each tissue sample, we suggest to exclude all cells within a randomly selected 30 degree spatial pie section of the images. This process was randomly repeated 50 times for each of the tissue samples. After augmenting, the proportions of each cell type within a sample was calculated and used as the features for that sample.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm mt-3 mt-md-0">
@@ -88,24 +88,42 @@ We developed a novel cell-level spatial augmentation approach called <i>sector e
     Sector elimination augmentation approach, showing the augmented partial images. 
 </div>
 
-After augmenting, the proportions of each cell type within a sample was calculated and used as the features for that sample.
-
-<h2>ML Experiments</h2>
-
-We used different classification models to evaluate TME association with various clinical labels, shown in Table 1. The features representing the proportion of different cell types were ranked using an ANOVA F-score statistic. We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the the optimal number of ranked features, along with the top performing classifier, for each label. Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
-
-
-
-
+To validate this augmentation method, we projected features representing the proportion of cells that we extracted from the original tissue images along with those from their augmented partial versions to a 2D t-SNE space.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="heatmap" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/aug-graph.PNG" title="augmentation graph" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Once the cell mask is created for each sample, PhenoGraph clustering is used to group cells with similar protein expressions (channels).
+    t-SNE plot of feature vectors of the generated dataset coloured by tissue samples, where "x" represents the original data and "o" represents the augmented data. 
 </div>
+
+The plot is labelled and coloured by tissue samples and the features from original images are marked with "x". As shown, the augmented data contains enough variability from the original tissue sample, while remaining similar enough to not compromise the strength of the labels. This lends itself well for the proposed augmentation approach to boost model training.
+
+Although having more patients would be preferred in order to draw and clinical conclusions with high significance, our augmentation method will at least allow for ML analysis on small patient cohort data at some capacity - a notable step forward since until now, there has not been a standardized method of augmenting IMC data. This augmentation can be applied to any kind of multi-channel sub-cellular imaging data for different types of diseases. 
+
+<h2>ML Experiments</h2>
+
+We used different classification models to evaluate TME association with various clinical labels, shown in Table 1. The features representing the proportion of different cell types were ranked using an ANOVA F-score statistic:
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/featscore_heatmapV2.png" title="fscore heatmap" class="full-width rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Heat map showing the significance (ANOVA F-scores) of the various cell proportions (x-axis) as features for the given clinical parameter (y-axis). Values are normalized between 0 and 1.
+</div>
+
+
+We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the the optimal number of ranked features, along with the top performing classifier, for each label. Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
+
+
+
+
+
+
 
 
 
