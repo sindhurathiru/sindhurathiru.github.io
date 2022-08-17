@@ -12,7 +12,7 @@ category: work
 Both tumour cells and the tumor microenvironemnt (TME) are important considerations when evaluating various cancers at the tissue level. With time, cancer cells evolve and are able to evade destruction by cells of the immune system, resulting in the formation of a tumor. Because of this, it's important to obtain a better understanding of the various cell types within the TME, since they may contribute to tumor progression. 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-12 mt-3 mt-md-0">
         {% include figure.html path="assets/img/tme.jpg" title="tme" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -50,7 +50,7 @@ Once we have the overall protein expression information for each cell, we can us
         {% include figure.html path="assets/img/cell seg.png" title="cell seg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/phenoclus.jpg" title="phenograph map" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/phenoclus.png" title="phenograph map" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/cellannot.png" title="cell annotation" class="img-fluid rounded z-depth-1" %}
@@ -62,10 +62,10 @@ Once we have the overall protein expression information for each cell, we can us
 
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/phenograph heatmap v2.png" title="phenograph heatmap" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/cell-map.PNG" title="cell map" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
