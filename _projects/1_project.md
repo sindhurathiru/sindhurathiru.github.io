@@ -11,6 +11,15 @@ category: work
 
 Both tumour cells and the tumor microenvironemnt (TME) are important considerations when evaluating various cancers at the tissue level. With time, cancer cells evolve and are able to evade destruction by cells of the immune system, resulting in the formation of a tumor. Because of this, it's important to obtain a better understanding of the various cell types within the TME, since they may contribute to tumor progression. 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/tme.jpg" title="tme" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Tumour microenvironment - network of blood and lymphatic vessels, extracellular matrix, and various cells surrounding a tumour including stromal cells and immune cells.
+</div>
+
 For this project, we do this using the Hyperion<sup>TM</sup> imaging system, which is an imaging mass cytometry (IMC) technology capable of high-throughput imaging of cells and proteins <i>in situ</i>. It produces multi-channel images per tissue sample, where each channel highlights the expression level of a given protein. Based on these expression levels, we can then identify the different cell types in the sample. IMC data have been used in cancer analysis studies in the past, however since it is a relatively new technology, these studies are limited and use regular statistical approaches rather than machine learning (ML) to estimate clinical outcomes. Hence, there's a much needed urgency to leverage the quantitative nature of this technology.
 
 The goal of the task here is to develop an end-to-end pipeline for ML-based analysis of IMC multi-channel data including a novel cell-level augmentation approach to increase data diversity, hence the generalizability of ML models. To demonstrate the utility of the proposed pipeline, we studied the association of the TME with various clinical parameters in a cohort of patients with muscle invasive bladder cancer (MIBC). We designed several experiments with signatures of IMC data and classification approaches and demonstrated that the combination of cell types found within the TME show promise as a foundation for future clinical research in this field.
@@ -38,11 +47,26 @@ Once we have the overall protein expression information for each cell, we can us
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cell seg.png" title="cell seg" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/phenoclus.jpg" title="phenograph map" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/cellannot.png" title="cell annotation" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    in order to get the protein expression for individual cells, we first segment the data to create the cell mask. From there, we use PhenoGraph to cluster cells that have similar expression levels. Using that, we then annotate the cell types based on the protein expression of each cluster.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/phenograph heatmap v2.png" title="overview" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Once the cell mask is created for each sample, P 
+    Once the cell mask is created for each sample, PhenoGraph clustering is used to group cells with similar protein expressions (channels).
 </div>
 
 <h2>Data Augmentation</h2>
