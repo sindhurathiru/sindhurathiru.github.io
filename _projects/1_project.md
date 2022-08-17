@@ -14,7 +14,10 @@ cover{
 }
 </style>
 
-<i>This work is published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
+<i>This work was presented and is published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
+
+[![presentation](assets/img/cell-map.PNG)](https://youtu.be/Bdf36SwT3Rc)
+
 
 <h2>Introduction</h2>
 
