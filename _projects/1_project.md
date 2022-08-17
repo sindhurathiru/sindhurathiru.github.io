@@ -7,13 +7,19 @@ importance: 1
 category: work
 ---
 
+<style>
+cover{
+    object-fit:cover;
+}
+</style>
+
 <h2>Introduction</h2>
 
 Both tumour cells and the tumor microenvironemnt (TME) are important considerations when evaluating various cancers at the tissue level. With time, cancer cells evolve and are able to evade destruction by cells of the immune system, resulting in the formation of a tumor. Because of this, it's important to obtain a better understanding of the various cell types within the TME, since they may contribute to tumor progression. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/tme.jpg" title="tme" class="full-width rounded z-depth-1" %}
+        {% include figure.html path="assets/img/tme.jpg" title="tme" class="cover rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
