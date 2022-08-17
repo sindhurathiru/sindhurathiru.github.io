@@ -14,7 +14,7 @@ cover{
 }
 </style>
 
-<i>This work was published in [Cytometry Part A](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.24535) and presented at the [2021 Imaging Network Ontario conference].
+<i>This work was published in [Cytometry Part A](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.24535) and presented at the [2021 Imaging Network Ontario conference](https://imno.ca/).
 </i>
 
 <iframe width="750" height="350" src="https://www.youtube.com/embed/5r2q63ghE-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -50,9 +50,7 @@ TITAN was developed within a free open-source software platform - [3D Slicer](ht
     User interface of TITAN. Sections of TITAN's user interface are shown in: a) Visualization tab and b) Analysis tab. c) TITAN can be added directly from the Extensions store in 3D Slicer.
 </div>
 
-TITAN uses several well-documented Python libraries including [Python Imaging Library](https://pillow.readthedocs.io/en/stable/), [SimpleITK](https://pypi.org/project/SimpleITK/), [matplotlib](https://matplotlib.org/), and [scikit-learn](https://scikit-learn.org/stable/).
-
-TITAN is open-source and publicly available through its [Github repository](https://github.com/SlicerMicro/Slicer-TITAN) along with detailed documentation and tutorials.
+TITAN uses several well-documented Python libraries including [Python Imaging Library](https://pillow.readthedocs.io/en/stable/), [SimpleITK](https://pypi.org/project/SimpleITK/), [matplotlib](https://matplotlib.org/), and [scikit-learn](https://scikit-learn.org/stable/). It is open-source and publicly available through its [Github repository](https://github.com/SlicerMicro/Slicer-TITAN) along with detailed documentation and tutorials.
 
 <h3>Overview</h3>
 

@@ -54,6 +54,12 @@ Note: You can find the code in [this Github repository](https://github.com/sindh
 
 We used 30 tissue samples collected from 15 MIBC patients who underwent a cystectomy (removal of the bladder). For each patient, 10 binary (yes/no) clinical parameters were also collected, including smoking, lymph node spread (LN), and other prognostic features. The tissue samples were stained with 28 protein markers and imaged using the Hyperion<sup>TM</sup>, creating a multi-channel image where each channel represents the expression of a given protein. This expression information is then used by a pathologist to identify the cell types within each sample, explained in detail in <i>Data Pre-Processing</i>. The proportions of each cell type for a given sample are then represented as a vector and form the features that will be used for ML experiments.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ml-data.PNG" title="ml-data" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 <h2>Data Pre-Processing</h2>
 
 In order to get the protein expression of each individual cell, we first need to segment the cells. To do this, we used the IMC processing and analysis software I developed, [TITAN](https://sindhurathiru.github.io/projects/2_project/). Once the cells were segmented and we got a resulting cell mask for each sample, we identified the average protein expression for each protein within each cell. This represents the expression of the given protein for that cell, meaning each cell was now represented by 28 protein expressions.
