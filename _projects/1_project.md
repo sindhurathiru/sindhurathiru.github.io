@@ -16,11 +16,8 @@ cover{
 
 <i>This work was presented and published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/BHI Presentation video v2.mp4" title="presentation video" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<video src='https://youtu.be/Bdf36SwT3Rc' width=180/>
+
 
 
 <h2>Introduction</h2>
@@ -138,7 +135,7 @@ The heat map shows that B cells were relevant to the  resence of TLS. Notably, T
 
 <h2>ML Experiments</h2>
 
-We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the optimal number of ranked features, along with the top performing classifier, for each label:
+We used <b>logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN)</b>, and an <b>ensemble</b> of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the optimal number of ranked features, along with the top performing classifier, for each label:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
