@@ -13,7 +13,7 @@ Both tumour cells and the tumor microenvironemnt (TME) are important considerati
 
 <div class="row">
     <div class="col-sm-12 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/tme.jpg" title="tme" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/tme.jpg" title="tme" class="full-width rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
