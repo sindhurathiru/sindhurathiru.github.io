@@ -131,14 +131,23 @@ We used logistic regression (LR), random forest (RF), decision tree (DT), k-near
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ml-table.png" title="fscore heatmap" class="full-width rounded z-depth-1" %}
+        {% include figure.html path="assets/img/ml-table.PNG" title="classifier table" class="cover rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     Association of TME with different clinical features (%).
 </div>
 
-Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
+These results illustrate the potential for ML to be used in a predictive setting. Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach. Overall, the performance of these models on the original data without any augmentation was lower:
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/aug-graph.PNG" title="aug graph" class="cover rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Comparison of model performance on original data versus original + augmented data.
+</div>
 
 
 
