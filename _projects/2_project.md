@@ -33,6 +33,11 @@ Imaging mass cytometry (IMC) is a powerful tissue imaging technology that improv
     <li>Export resulting data for external analyses if necessary</li>
 </ol>
 
+In order to complete these tasks, three separate software - endorsed by the manufacturers of the Hyperion™ - are needed and require the unnecessary exportation of partial data results.
+
+Although these software are the standard for analysis of IMC data, they are lacking in utility and require using multiple software for each of the tasks of visualization, segmentation, and analysis. In addition to issues in efficiency, 
+
+
 
 
 
