@@ -24,7 +24,14 @@ cover{
 
 <h2>Introduction</h2>
 
+Imaging mass cytometry (IMC) is a powerful tissue imaging technology that improves upon traditional imaging methods. It's capable of outputting a large amount of data, however the current analysis methods are fairly preliminary. Currently, the analytical pipeline is as follows:
 
+<ol>
+    <li>Export raw data using <i>MCD Viewer</i></li>
+    <li>Import images from <i>MCD Viewer</i> into <i>CellProfiler</i> for cell segmentation</li>
+    <li>Export generated masks from <i>CellProfiler</i> to the analysis software <i>histoCat</i></li>
+    <li>Export resulting data for external analyses if necessary</li>
+</ol>
 
 
 
