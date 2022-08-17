@@ -32,9 +32,28 @@ Note: You can find the code in [this Github repository](https://github.com/sindh
 
 <h2>The Data</h2>
 
-With medical data specifically, it has been a longstanding challenge to acquire data from large numbers of subjects. While ML requires data points in the thousands, most patient cohorts are only in the tens. Therefore, proper <b>data augmentation</b> becomes crucial to enable appropriate learning from the data. In IMC images, the protein expressions are measured for each individual cell in the image. For each cell, the averaged pixel intensities within the cell corresponds to its protein expression. Therefore, normal image augmenting techniques like rotations and flips would not work. Though a rotation or flip would change the spatial location of the pixels in relation to the whole image, the pixel intensities within each cell would remain unchanged. Thus, a proper IMC data augmentation technique is necessary.
+We used 30 tissue samples collected from 15 MIBC patients who underwent a cystectomy (removal of the bladder). For each patient, 10 binary (yes/no) clinical parameters were also collected, including smoking, lymph node spread (LN), and other prognostic features. The tissue samples were stained with 28 protein markers and imaged using the Hyperion<sup>TM</sup>, creating a multi-channel image where each channel represents the expression of a given protein. This expression information is then used by a pathologist to identify the cell types within each sample, explained in detail in <i>Data Pre-Processing</i>. The proportions of each cell type for a given sample are then represented as a vector and form the features that will be used for ML experiments.
 
+<h2>Data Pre-Processing</h2>
 
+In order to get the protein expression of each individual cell, we first need to segment the cells. To do this, we used the IMC processing and analysis software I developed, [TITAN](https://sindhurathiru.github.io/projects/2_project/). Once the cells were segmented and we got a resulting cell mask for each sample, we identified the average protein expression for each protein within each cell. This represents the expression of the given protein for that cell, meaning each cell was now represented by 28 protein expressions.
+
+Once we have the overall protein expression information for each cell, we can use that information to identify the type of each cell. For example, if one cell expresses a large amount of the protein CD8, it likely means that the cell is a CD8 T cell. To do this, we used [PhenoGraph clustering](https://www.sciencedirect.com/science/article/pii/S0092867415006376) to identify groups of cells within a sample that have similar protein expression. With this, millions of cells can be represented within tens of clusters. Then, using the resulting clusters, a pathologist annotates the cell type of each cluster based on the protein expressions. From there, the proportion of each cell type within a sample was calculated and used as a feature for that sample.
+
+<h2>Data Augmentation</h2>
+
+With medical data specifically, it has been a longstanding challenge to acquire data from large numbers of subjects. While ML requires data points in the thousands, most patient cohorts are only in the tens. Therefore, proper data augmentation becomes crucial to enable appropriate learning from the data. In IMC images, the protein expressions are measured for each individual cell in the image. For each cell, the averaged pixel intensities within the cell corresponds to its protein expression. Therefore, normal image augmenting techniques like rotations and flips would not work. Though a rotation or flip would change the spatial location of the pixels in relation to the whole image, the pixel intensities within each cell would remain unchanged. Thus, a proper IMC data augmentation technique is necessary.
+
+We developed a novel cell-level spatial augmentation approach called <i>sector elimination</i>. For each tissue sample, we suggest to exclude all cells within a randomly selected 30 degree spatial pie section of the images. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/augmentation.png" title="augmentation" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Sector elimination augmentation approach, showing the augmented partial images. 
+</div>
 
 
 
