@@ -7,10 +7,6 @@ importance: 1
 category: work
 ---
 
-<i>The contents of this page are published in 2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI).</i>
-
-<p style="text-align: center;"><b>The Hyperion<sup>TM</sup> Imaging System is a novel technology that uses imaging mass cytometry (IMC) to improve upon current methods of tissue imaging, enabling sub-cellular spatial resolution and acquisition of up to 37 proteins on a single tissue slide. The technology is fairly new, and thus we want to explore the types of analysis possible with these data. Here, we introduce an analysis pipeline to utilize machine learning-based analysis for IMC data using data from a muscle invasive bladder cancer patient cohort. We also propose a novel augmentation method to handle the challenge of low number of tissue samples from IMC studies. Our augmentation method was validated and shown to perform better than when only using the original data. Both our pipeline and augmentation method show promise for applications in future research studies and clinical evaluation of this technology. Our results indicate the feasibility of using the proposed framework with a more robust data set to identify prognostic features, which is an important foundation for further clinical research.</b></p>
-
 <h2>Introduction</h2>
 
 Both tumour cells and the tumor microenvironemnt (TME) are important considerations when evaluating various cancers at the tissue level. With time, cancer cells evolve and are able to evade destruction by cells of the immune system, resulting in the formation of a tumor. Because of this, it's important to obtain a better understanding of the various cell types within the TME, since they may contribute to tumor progression. 
@@ -38,15 +34,24 @@ We used 30 tissue samples collected from 15 MIBC patients who underwent a cystec
 
 In order to get the protein expression of each individual cell, we first need to segment the cells. To do this, we used the IMC processing and analysis software I developed, [TITAN](https://sindhurathiru.github.io/projects/2_project/). Once the cells were segmented and we got a resulting cell mask for each sample, we identified the average protein expression for each protein within each cell. This represents the expression of the given protein for that cell, meaning each cell was now represented by 28 protein expressions.
 
-Once we have the overall protein expression information for each cell, we can use that information to identify the type of each cell. For example, if one cell expresses a large amount of the protein CD8, it likely means that the cell is a CD8 T cell. To do this, we used [PhenoGraph clustering](https://www.sciencedirect.com/science/article/pii/S0092867415006376) to identify groups of cells within a sample that have similar protein expression. With this, millions of cells can be represented within tens of clusters. Then, using the resulting clusters, a pathologist annotates the cell type of each cluster based on the protein expressions. From there, the proportion of each cell type within a sample was calculated and used as a feature for that sample.
+Once we have the overall protein expression information for each cell, we can use that information to identify the type of each cell. For example, if one cell expresses a large amount of the protein CD8, it likely means that the cell is a CD8 T cell. To do this, we used [PhenoGraph clustering](https://www.sciencedirect.com/science/article/pii/S0092867415006376) to identify groups of cells within a sample that have similar protein expression. With this, millions of cells can be represented within tens of clusters. Then, using the resulting clusters, a pathologist annotates the cell type of each cluster based on the protein expressions. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/phenograph heatmap v2.png" title="overview" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Once the cell mask is created for each sample, P 
+</div>
 
 <h2>Data Augmentation</h2>
 
 With medical data specifically, it has been a longstanding challenge to acquire data from large numbers of subjects. While ML requires data points in the thousands, most patient cohorts are only in the tens. Therefore, proper data augmentation becomes crucial to enable appropriate learning from the data. In IMC images, the protein expressions are measured for each individual cell in the image. For each cell, the averaged pixel intensities within the cell corresponds to its protein expression. Therefore, normal image augmenting techniques like rotations and flips would not work. Though a rotation or flip would change the spatial location of the pixels in relation to the whole image, the pixel intensities within each cell would remain unchanged. Thus, a proper IMC data augmentation technique is necessary.
 
-We developed a novel cell-level spatial augmentation approach called <i>sector elimination</i>. For each tissue sample, we suggest to exclude all cells within a randomly selected 30 degree spatial pie section of the images. 
+We developed a novel cell-level spatial augmentation approach called <i>sector elimination</i>. For each tissue sample, we suggest to exclude all cells within a randomly selected 30 degree spatial pie section of the images. This process was randomly repeated 50 times for each of the tissue samples.
 
-<div class="row">
+<div class="row justify-content-sm-center">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/augmentation.png" title="augmentation" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -54,6 +59,16 @@ We developed a novel cell-level spatial augmentation approach called <i>sector e
 <div class="caption">
     Sector elimination augmentation approach, showing the augmented partial images. 
 </div>
+
+After augmenting, the proportions of each cell type within a sample was calculated and used as the features for that sample.
+
+<h2>ML Experiments</h2>
+
+We used different classification models to evaluate TME association with various clinical labels, shown in Table 1. The features representing the proportion of different cell types were ranked using an ANOVA F-score statistic. We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the the optimal number of ranked features, along with the top performing classifier, for each label. Additionally, we repeated the ML analyses using the original data without any augmentation to compare with our proposed augmentation approach.
+
+
+
+
 
 
 
