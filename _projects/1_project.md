@@ -14,11 +14,11 @@ cover{
 }
 </style>
 
-<i>This work was presented and is published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
+<i>This work was presented and published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/" title="tme" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/BHI Presentation video v2.mp4" title="presentation video" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
