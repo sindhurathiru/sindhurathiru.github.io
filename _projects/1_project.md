@@ -16,7 +16,11 @@ cover{
 
 <i>This work was presented and is published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
 
-[![presentation](assets/img/cell-map.PNG)](https://youtu.be/Bdf36SwT3Rc)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/" title="tme" class="cover rounded z-depth-1" %}
+    </div>
+</div>
 
 
 <h2>Introduction</h2>
