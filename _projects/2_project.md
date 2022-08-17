@@ -41,6 +41,15 @@ Although these software are the standard for analysis of IMC data, they are lack
 
 TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/). 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/extensions store v2.png" title="titan store" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    User interface of TITAN. Sections of TITAN's user interface are shown in: a) Visualization tab and b) Analysis tab. c) TITAN can be added directly from the Extensions store in 3D Slicer.
+</div>
+
 
 
 
