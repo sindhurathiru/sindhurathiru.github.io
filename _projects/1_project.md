@@ -10,7 +10,7 @@ category: research
 <style>
 cover{
     /* object-fit:cover; */
-    width: 150 px
+    width: auto;
 }
 </style>
 
