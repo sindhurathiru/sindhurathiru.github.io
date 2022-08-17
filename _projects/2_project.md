@@ -2,10 +2,41 @@
 layout: page
 title: TITAN
 description: Processing & analysis software for IMC data
-img: assets/img/3.jpg
+img: assets/img/logo v2.PNG
 importance: 1
 category: research
 ---
+
+<style>
+cover{
+    /* object-fit:cover; */
+    width: auto;
+}
+</style>
+
+<i>This work was published in [Cytometry Part A](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.24535) and presented at the [2021 Imaging Network Ontario conference].
+</i>
+
+<iframe width="720" height="350" src="https://www.youtube.com/embed/Bdf36SwT3Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
+<h2>Introduction</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
