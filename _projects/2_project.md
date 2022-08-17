@@ -17,7 +17,7 @@ cover{
 <i>This work was published in [Cytometry Part A](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.24535) and presented at the [2021 Imaging Network Ontario conference].
 </i>
 
-<iframe width="720" height="350" src="https://www.youtube.com/embed/Bdf36SwT3Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="750" height="350" src="https://www.youtube.com/embed/5r2q63ghE-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
@@ -35,7 +35,11 @@ Imaging mass cytometry (IMC) is a powerful tissue imaging technology that improv
 
 In order to complete these tasks, three separate software - endorsed by the manufacturers of the Hyperion™ - are needed and require the unnecessary exportation of partial data results.
 
-Although these software are the standard for analysis of IMC data, they are lacking in utility and require using multiple software for each of the tasks of visualization, segmentation, and analysis. In addition to issues in efficiency, 
+Although these software are the standard for analysis of IMC data, they are lacking in utility and require using multiple software for each of the tasks of visualization, segmentation, and analysis. In addition to issues in efficiency, there are certain pitfalls within the functionality of the software themselves, identified by users of these software.
+
+<h2>Implementation</h2>
+
+TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/). 
 
 
 
