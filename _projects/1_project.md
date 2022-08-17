@@ -19,7 +19,7 @@ cover{
 </blockquote>
 
 <video src='https://youtu.be/Bdf36SwT3Rc' width=180/>
-
+</video>
 
 
 <h2>Introduction</h2>
