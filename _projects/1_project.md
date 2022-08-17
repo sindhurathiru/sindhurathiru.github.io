@@ -9,7 +9,8 @@ category: work
 
 <style>
 cover{
-    object-fit:cover;
+    /* object-fit:cover; */
+    width: 100%
 }
 </style>
 
@@ -109,7 +110,7 @@ The plot is labelled and coloured by tissue samples and the features from origin
 
 Although having more patients would be preferred in order to draw and clinical conclusions with high significance, our augmentation method will at least allow for ML analysis on small patient cohort data at some capacity - a notable step forward since until now, there has not been a standardized method of augmenting IMC data. This augmentation can be applied to any kind of multi-channel sub-cellular imaging data for different types of diseases. 
 
-<h2>ML Experiments</h2>
+<h2>Feature Scoring</h2>
 
 We used different classification models to evaluate TME association with various clinical labels, shown in Table 1. The features representing the proportion of different cell types were ranked using an ANOVA F-score statistic:
 
@@ -126,6 +127,7 @@ The heat map is grouped by the level of significance of features for the differe
 
 The heat map shows that B cells were relevant to the  resence of TLS. Notably, TLS are primarily composed of B cells and thus, this association appears to have biological relevance. In addition, CD8+ T and actin+ cells were recognized to be relevant to recurrence risk. In a past study, increased frequency of CD8+ T  cells at the invasive margin in MIBC was found to be associated with prolonged overall survival. Actin+ has shown to play a role in cancer progression through modulation of gene expression. It's typically found mostly in muscle cells, including the thick muscular wall of the bladder, so these results are not entirely unexpected given that the definition of MIBC is tumor spread into the muscle layer of the bladder wall. Finally, we found that CD163+ macrophages were relevant to prior BCG exposure. BCG is an immunotherapy given to patients with non-muscle  invasive bladder cancer (NMIBC), often a precursor to MIBC. There is evidence that CD163+ macrophages in NMIBC are associated with BCG failure, and it is notable that patients in our cohort with prior BCG exposure for their NMIBC diagnosis experienced BCG failure since they progressed to MIBC.
 
+<h2>ML Experiments</h2>
 
 We used logistic regression (LR), random forest (RF), decision tree (DT), k-nearest neighbour (KNN), and an ensemble of all four models, in a 4-fold cross validation configuration, to validate the performance of varying numbers of top ranked features. For each classifier, the default parameters were used. During fold generation, care was taken to ensure that all data samples from a single patient remained in the same fold. We also used Synthetic Minority Over-sampling Technique (SMOTE) to balance the data, such that each fold contained an equivalent amount of the label we were approximating. The cross validation for each classifier was repeated 50 times - each time with different, randomly generated folds - and the average accuracy of the classifiers on the test fold data in all runs was reported. Based on the results of the experiments, we decided on the optimal number of ranked features, along with the top performing classifier, for each label:
 
@@ -149,7 +151,7 @@ These results illustrate the potential for ML to be used in a predictive setting
     Comparison of model performance on original data versus original + augmented data.
 </div>
 
-
+For instance, the accuracy when estimating smoker status, LN, and NACT were 56.7±5.4%, 46.5±6.7%, and 54.4±4.5 respectively. For these labels, we could see that augmentation improved the model performance in a statistically significant way (p<0.001). For the other labels where performance was not improved significantly, we observed that standard deviation was much higher when the model was run without the augmented data. This indicates that without the augmented data, the model is more sensitive to the distribution of data within folds. Thus, our proposed augmentation seems to positively affects the training of the ML classifiers. Overall, our results show promise for sector elimination augmentation to be further researched and eventually applied in larger clinical studies.
 
 
 
