@@ -17,7 +17,7 @@ cover{
 <i>This work was presented and published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).
 </i>
 
-<iframe width="700" src="https://www.youtube.com/embed/Bdf36SwT3Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" height="350" src="https://www.youtube.com/embed/Bdf36SwT3Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <h2>Introduction</h2>
