@@ -14,7 +14,9 @@ cover{
 }
 </style>
 
-<i>This work was presented and published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).</i>
+<blockquote>
+    This work was presented and published in [2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)](https://ieeexplore.ieee.org/abstract/document/9508569).
+</blockquote>
 
 <video src='https://youtu.be/Bdf36SwT3Rc' width=180/>
 
