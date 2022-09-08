@@ -28,7 +28,18 @@ Make your photos 1/3, 2/3, or full width.
     </div>
 </div>
 
-
+<div class="row" style="background-color: #c4d6e2">
+    <div class="col-sm mt-3 mt-md-0">
+        <h3>Goal</h3>
+            <p>Testing sample text. sample sample sample.</p>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <h3>Goal</h3>
+            <p>Testing sample text. sample sample sample.</p>    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <h3>Goal</h3>
+            <p>Testing sample text. sample sample sample.</p>    </div>
+</div>
 
 
 
