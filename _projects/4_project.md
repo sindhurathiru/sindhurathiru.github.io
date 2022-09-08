@@ -3,7 +3,7 @@ layout: page
 title: Automating Cell Annotation
 description: Automated cell type annotation using a convolutional autoencoder.
 img: assets/img/cell-map.PNG
-importance: 3
+importance: 2
 category: research
 ---
 
