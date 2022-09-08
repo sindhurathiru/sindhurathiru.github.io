@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - sindhurathiru
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - SlicerMicro/Slicer-TITAN
+  - sindhurathiru/ML-IMCAnalysis
+  - sindhurathiru/cellAnnotation-IMC
+  - sindhurathiru/mibc-TME
