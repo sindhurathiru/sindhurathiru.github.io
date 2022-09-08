@@ -2,7 +2,7 @@
 layout: page
 title: Automating Cell Annotation
 description: Automated cell type annotation using a convolutional autoencoder.
-img: assets/img/cell-map.PNG
+img: assets/img/cell-type.PNG
 importance: 2
 category: research
 ---
@@ -10,23 +10,6 @@ category: research
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
-
-<div class="col-xs-12" style="background-color: #c4d6e2">
-    <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2 no-padding">
-        <div class="col-xs-12 col-sm-4 section">
-            <h3>Goal</h3>
-            <p>Testing sample text. sample sample sample.</p>
-        </div>
-        <div class="col-xs-12 col-sm-4 section">
-            <h3>Result</h3>
-            <p>Test sample sample text text sample balh blah blah.</p>
-        </div>
-        <div class="col-xs-12 col-sm-4 section">
-            <h3>Duration</h3>
-            <p>seifoeja fmeoam feioan test test</p>
-        </div>
-    </div>
-</div>
 
 <div class="row" style="background-color: #c4d6e2">
     <div class="col-sm mt-3 mt-md-0">
