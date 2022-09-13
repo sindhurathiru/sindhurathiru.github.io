@@ -20,18 +20,19 @@ cover{
 <iframe width="750" height="350" src="https://www.youtube.com/embed/5r2q63ghE-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
-<br>
 
 <div class="row justify-content-sm-center" style="background-color: #fbf2fb">
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3">
         <h3 style="color: #b87bd0">Goal</h3>
             <p style="color: #b87bd0">Develop a tool that can provide end-to-end analysis of imaging mass cytometry data and improve upon the current software.</p>
     </div>
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3">
         <h3 style="color: #b87bd0">Result</h3>
             <p style="color: #b87bd0">Developed <i>TITAN</i>, which provides a step-by-step, user-centered workflow for visualization, segmentation, and analysis. It mitigates the shortcomings of current analysis pipelines and improves efficiency.</p>
     </div>
 </div>
+
+<br>
 
 <h2>Introduction</h2>
 
@@ -65,7 +66,7 @@ TITAN uses several well-documented Python libraries including [Python Imaging Li
 
 <h3>Overview</h3>
 
-TITAN's functionality is divided into 3 main categories:
+TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
 
 <ol>
     <li>Visualization</li>
@@ -73,7 +74,9 @@ TITAN's functionality is divided into 3 main categories:
     <li>Analysis</li>
 </ol>
 
-After importing IMC data in text or image format, the user can view individual protein channels as well as an overlay of multiple channels at once.
+After importing IMC data in text or image format, the user can view individual protein channels as well as an overlay of multiple channels at once. Users can then segment the nucleus channel into a cell mask, which is required for single-cell feature extraction and analysis. Once the cell mask is created, the user can produce a variety of quantitative plots that provide statistical information about the data. 
+
+<h3>Data Importation</h3>
 
 
 
