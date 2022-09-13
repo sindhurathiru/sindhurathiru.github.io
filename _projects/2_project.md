@@ -82,6 +82,9 @@ TITAN allows the user to import either raw text files, which are generated durin
 
 <h3 size="-1">Visualization</h3>
 
+TITAN provides a thumbnail overview of all single-channel images within a given acquired IMC ROI, providing users the ability to assess staining easily and qualitatively. TITAN also allows for the visualization and overlay of up to seven false-coloured channels simultaneously for each ROI, which can be used to generate publication quality figures. An advantage of TITAN compared with MCD Viewer is that, with TITAN, the user is able to manually threshold images or perform automated colour scaling – a feature provided through 3D Slicer. These adjustments can be applied globally to the entire ROI, or locally based on a user-selected region of the ROI. This functionality allows users to optimize the brightness/contrast of multi-channel images interactively and conveniently. Furthermore, TITAN enables users to retain the adjustment parameters for a selected ROI and apply it to all other ROIs to achieve standardized and comparable visualizations across a dataset.
+
+<h3 size="-1">Segmentation</h3>
 
 
 
