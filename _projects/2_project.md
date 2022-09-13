@@ -22,14 +22,14 @@ cover{
 <br>
 <br>
 
-<div class="row justify-content-sm-center">
+<div class="row justify-content-sm-center" style="background-color: #fbf2fb">
     <div class="col-sm-4 mt-3 mt-md-0">
-        <h3>Goal</h3>
-            <p>Develop a tool that can provide end-to-end analysis of imaging mass cytometry data and improve upon the current software.</p>
+        <h3 style="color: #b87bd0">Goal</h3>
+            <p style="color: #b87bd0">Develop a tool that can provide end-to-end analysis of imaging mass cytometry data and improve upon the current software.</p>
     </div>
     <div class="col-sm-8 mt-3 mt-md-0">
-        <h3>Result</h3>
-            <p>Developed <i>TITAN</i>, which provides a step-by-step, user-centered workflow for visualization, segmentation, and analysis. It mitigates the shortcomings of current analysis pipelines and improves efficiency.</p>
+        <h3 style="color: #b87bd0">Result</h3>
+            <p style="color: #b87bd0">Developed <i>TITAN</i>, which provides a step-by-step, user-centered workflow for visualization, segmentation, and analysis. It mitigates the shortcomings of current analysis pipelines and improves efficiency.</p>
     </div>
 </div>
 
