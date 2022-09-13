@@ -22,6 +22,17 @@ cover{
 <br>
 <br>
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <h3>Goal</h3>
+            <p>Develop a tool that can provide end-to-end analysis of imaging mass cytometry data and improve upon the current software.</p>
+    </div>
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <h3>Result</h3>
+            <p>Developed <i>TITAN</i>, which provides a step-by-step, user-centered workflow for visualization, segmentation, and analysis. It mitigates the shortcomings of current analysis pipelines and improves efficiency.</p>
+    </div>
+</div>
+
 <h2>Introduction</h2>
 
 Imaging mass cytometry (IMC) is a powerful tissue imaging technology that improves upon traditional imaging methods. It's capable of outputting a large amount of data, however the current analysis methods are fairly preliminary. Currently, the analytical pipeline is as follows:
