@@ -64,6 +64,8 @@ TITAN was developed within a free open-source software platform - [3D Slicer](ht
 
 TITAN uses several well-documented Python libraries including [Python Imaging Library](https://pillow.readthedocs.io/en/stable/), [SimpleITK](https://pypi.org/project/SimpleITK/), [matplotlib](https://matplotlib.org/), and [scikit-learn](https://scikit-learn.org/stable/). It is open-source and publicly available through its [Github repository](https://github.com/SlicerMicro/Slicer-TITAN) along with detailed documentation and tutorials.
 
+To demonstrate the utility of TITAN’s features and evaluate its segmentation method, we used multiple, publicly available datasets. The [first dataset](https://www.nature.com/articles/s41586-019-1876-x) was collected from breast cancer patients the [second dataset](https://www.nature.com/articles/s41586-021-03475-6), used for further evaluation of the segmentation method, is of lung tissue obtained from COVD-19 patients.
+
 <h3 size="-6">Overview</h3>
 
 TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
@@ -85,6 +87,15 @@ TITAN allows the user to import either raw text files, which are generated durin
 TITAN provides a thumbnail overview of all single-channel images within a given acquired IMC ROI, providing users the ability to assess staining easily and qualitatively. TITAN also allows for the visualization and overlay of up to seven false-coloured channels simultaneously for each ROI, which can be used to generate publication quality figures. An advantage of TITAN compared with MCD Viewer is that, with TITAN, the user is able to manually threshold images or perform automated colour scaling – a feature provided through 3D Slicer. These adjustments can be applied globally to the entire ROI, or locally based on a user-selected region of the ROI. This functionality allows users to optimize the brightness/contrast of multi-channel images interactively and conveniently. Furthermore, TITAN enables users to retain the adjustment parameters for a selected ROI and apply it to all other ROIs to achieve standardized and comparable visualizations across a dataset.
 
 <h3 size="-6">Segmentation</h3>
+
+Beyond visualization, IMC enables proteomic imaging at subcellular resolution, thus allowing for single cell-level phenotyping and characterization of tissues. Delineation and segmentation of individual cells within ROIs is a critical step in any IMC data analysis pipeline. In order to segment this nucleus channel, TITAN utilizes a watershed algorithm and morphological image processing to create the initial nucleus mask. When cell segmentation is complete, the total number of cells segmented within each ROI is reported, which is an essential variable for further analysis. Notably, TITAN generates cell masks for multiple ROIs simultaneously and efficiently.
+
+<h3 size="-6">Analysis</h3>
+
+TITAN contains simple analysis functions including the generation of histograms, scatter plots, and heat maps of cell features, as well as more computationally complex methods such as dimensionality reduction and clustering functions for cell features. 
+
+Following cell segmentation, cell-level mean intensities can be extracted from multi-channel data by calculating the mean intensity of each protein channel within each cell. TITAN is also then capable of exporting these data in spreadsheets, which can be used in external applications as well. This feature provides the user the flexibility to perform downstream analyses of single-cell data in their preferred program or in-house pipeline(s). 
+
 
 
 
