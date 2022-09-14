@@ -8,9 +8,11 @@ category: research
 ---
 
 <style>
-cover{
-    /* object-fit:cover; */
-    width: auto;
+th{
+    text-align: center;
+}
+td{
+    text-align: center;
 }
 </style>
 
