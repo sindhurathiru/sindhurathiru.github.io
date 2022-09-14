@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TITAN
-description: Processing & analysis software for IMC data
+description: Image processing & analysis software for IMC data
 img: assets/img/logo-v2.PNG
 importance: 3
 category: research
@@ -64,9 +64,8 @@ TITAN was developed within a free open-source software platform - [3D Slicer](ht
 
 TITAN uses several well-documented Python libraries including [Python Imaging Library](https://pillow.readthedocs.io/en/stable/), [SimpleITK](https://pypi.org/project/SimpleITK/), [matplotlib](https://matplotlib.org/), and [scikit-learn](https://scikit-learn.org/stable/). It is open-source and publicly available through its [Github repository](https://github.com/SlicerMicro/Slicer-TITAN) along with detailed documentation and tutorials.
 
-To demonstrate the utility of TITAN’s features and evaluate its segmentation method, we used multiple, publicly available datasets. The [first dataset](https://www.nature.com/articles/s41586-019-1876-x) was collected from breast cancer patients the [second dataset](https://www.nature.com/articles/s41586-021-03475-6), used for further evaluation of the segmentation method, is of lung tissue obtained from COVD-19 patients.
+<!-- To demonstrate the utility of TITAN’s features and evaluate its segmentation method, we used multiple, publicly available datasets. The [first dataset](https://www.nature.com/articles/s41586-019-1876-x) was collected from breast cancer patients the [second dataset](https://www.nature.com/articles/s41586-021-03475-6), used for further evaluation of the segmentation method, is of lung tissue obtained from COVD-19 patients. -->
 
-<h3 size="-6">Overview</h3>
 
 TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
 
@@ -90,9 +89,9 @@ TITAN provides a thumbnail overview of all single-channel images within a given 
 
 Beyond visualization, IMC enables proteomic imaging at subcellular resolution, thus allowing for single cell-level phenotyping and characterization of tissues. Delineation and segmentation of individual cells within ROIs is a critical step in any IMC data analysis pipeline. In order to segment this nucleus channel, TITAN utilizes a watershed algorithm and morphological image processing to create the initial nucleus mask. When cell segmentation is complete, the total number of cells segmented within each ROI is reported, which is an essential variable for further analysis. Notably, TITAN generates cell masks for multiple ROIs simultaneously and efficiently.
 
-We used the public breast cancer dataset and lung injury dataset to also evaluate TITAN’s segmentation relative to currently accepted segmentation methods and standards. The segmentation results were compared with i) published results in the reference study which we refer to as the “reference pipeline”, and ii) results from masks created using the manufacturer-provided software CellProfiler. The purpose of comparing TITAN’s masks to those created by CellProfiler is to demonstrate the comparability of TITAN with CellProfiler. It is important to note that the generation of the reference masks involve the use of CellProfiler, which may have an effect on the evaluation results. Ilastik uses a random forest model and manual annotation of background and cells to semantically segment the images. The output of Ilastik is a probability map image, where the intensity of a pixel corresponds to the likelihood of it belonging to a cell \cite{ilastik}. In other words, it returns a value for each segmented object that is associated with the probability of that object being a cell. CellProfiler then uses this output along with a specified threshold intensity value to create a labelled cell mask. Since these masks have been published and peer reviewed, we used them as baseline for evaluation of TITAN. Visualization of the segmented mask from a sample ROI using the reference pipeline, TITAN, and CellProfiler can be used for qualitative comparison. 
+ 
 
-<h3 size="-6">Analysis</h3>
+<h3 size="6">Analysis</h3>
 
 TITAN contains simple analysis functions including the generation of histograms, scatter plots, and heat maps of cell features, as well as more computationally complex methods such as dimensionality reduction and clustering functions for cell features. 
 
@@ -105,11 +104,7 @@ Following cell segmentation, cell-level mean intensities can be extracted from m
 
 
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
     ---
     layout: page
