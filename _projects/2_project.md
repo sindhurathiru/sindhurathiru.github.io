@@ -97,6 +97,8 @@ TITAN contains simple analysis functions including the generation of histograms,
 
 Following cell segmentation, cell-level mean intensities can be extracted from multi-channel data by calculating the mean intensity of each protein channel within each cell. TITAN is also then capable of exporting these data in spreadsheets, which can be used in external applications as well. This feature provides the user the flexibility to perform downstream analyses of single-cell data in their preferred program or in-house pipeline(s). 
 
+Using the scatter plots produced by TITAN, a manual gating function was implemented. This function allows users to manually gate cell populations based on the hierarchical expression proteins in a two-by-two manner, comparable to how hierarchical gating of cell flow cytometry data is performed. To gate, the user selects two channels for the scatter plot and selects the cells of interest. When the user creates the gated area, a new cell mask containing only the selected cells is displayed and the user has the option to continue gating the images into successive generations. TITAN’s gating feature will be familiar to users experienced with flow cytometry analysis and will enable manual identification and enumeration of cell populations based on marker expression.  
+
 
 
 
