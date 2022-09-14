@@ -112,7 +112,85 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
         <tr>
             <td colspan="1"></td>
             <td scope="col">TITAN</td>
-            <td scope="col">MCD Viewer 
+            <td scope="col">MCD Viewer</td>
+            <td scope="col">CellProfiler</td>
+            <td scope="col">histoCAT</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Thumbnail view</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Image Visualization</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Automated colour scaling</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Reading of multi-channel text files</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mask creation for all ROI at once</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Basic mean intensity plots</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Gating</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Dimensionality reduction</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Clustering functions</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Export raw data of cell mean intensities</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 
 
 
