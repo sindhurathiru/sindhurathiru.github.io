@@ -19,7 +19,7 @@ category: research
     <i>(click image to open in new window)</i>
 </div>
 
-<h2>Convolutional Autoencoder Structure
+<h2>Convolutional Autoencoder Structure</h2>
 
 {% highlight python linenos %}
 
