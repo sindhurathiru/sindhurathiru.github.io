@@ -56,7 +56,7 @@ Although these software are the standard for analysis of IMC data, they are lack
 TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/) - for the purpose of addressing pitfalls and inefficienceis in the existing workflows for IMC analysis. It's compatible with both multi-channel text files and single-channel TIFF images of IMC data as inputs and provides an end-to-end pipeline for exploration and quantification of IMC data in a single environment. 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3">
         {% include figure.html path="assets/img/extensions store v2.png" title="titan store" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -69,6 +69,7 @@ TITAN uses several well-documented Python libraries including [Python Imaging Li
 <!-- To demonstrate the utility of TITAN’s features and evaluate its segmentation method, we used multiple, publicly available datasets. The [first dataset](https://www.nature.com/articles/s41586-019-1876-x) was collected from breast cancer patients the [second dataset](https://www.nature.com/articles/s41586-021-03475-6), used for further evaluation of the segmentation method, is of lung tissue obtained from COVD-19 patients. -->
 
 
+
 TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
 
 <ol>
@@ -76,6 +77,13 @@ TITAN's functionality is divided into 3 main categories, following the natural o
     <li>Segmentation</li>
     <li>Analysis</li>
 </ol>
+
+<div class="row">
+    <div class="col-sm mt-3">
+        {% include figure.html path="assets/img/titan_overview.png" title="titan overview" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
 
 After importing IMC data in text or image format, the user can view individual protein channels as well as an overlay of multiple channels at once. Users can then segment the nucleus channel into a cell mask, which is required for single-cell feature extraction and analysis. Once the cell mask is created, the user can produce a variety of quantitative plots that provide statistical information about the data. 
 
@@ -103,6 +111,8 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
 
 
 <h2>Summary of Features</h2>
+
+<br>
 
 <table style="width:100%">
     <thead>
