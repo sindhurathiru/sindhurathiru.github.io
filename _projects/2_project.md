@@ -36,7 +36,6 @@ td{
 
 <br>
 
-<h2>Introduction</h2>
 
 Imaging mass cytometry (IMC) is a powerful tissue imaging technology that improves upon traditional imaging methods. It's capable of outputting a large amount of data, however the current analysis methods are fairly preliminary. Currently, the analytical pipeline is as follows:
 
@@ -51,9 +50,8 @@ In order to complete these tasks, three separate software - endorsed by the manu
 
 Although these software are the standard for analysis of IMC data, they are lacking in utility and require using multiple software for each of the tasks of visualization, segmentation, and analysis. In addition to issues in efficiency, there are certain pitfalls within the functionality of the software themselves, identified by users of these software.
 
-<h2>Implementation</h2>
 
-TITAN was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/) - for the purpose of addressing pitfalls and inefficienceis in the existing workflows for IMC analysis. It's compatible with both multi-channel text files and single-channel TIFF images of IMC data as inputs and provides an end-to-end pipeline for exploration and quantification of IMC data in a single environment. 
+[<b>TITAN</b>](https://github.com/SlicerMicro/Slicer-TITAN) was developed within a free open-source software platform - [3D Slicer](https://www.slicer.org/) - for the purpose of addressing pitfalls and inefficienceis in the existing workflows for IMC analysis. It's compatible with both multi-channel text files and single-channel TIFF images of IMC data as inputs and provides an end-to-end pipeline for exploration and quantification of IMC data in a single environment. 
 
 <div class="row">
     <div class="col-sm mt-3">
