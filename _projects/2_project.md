@@ -110,7 +110,7 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
             <th colspan="3" scope="colgroup">Manufacturer Software</th>
         </tr>
         <tr>
-            <td colspan="1"></td>
+            <td></td>
             <td scope="col">TITAN</td>
             <td scope="col">MCD Viewer</td>
             <td scope="col">CellProfiler</td>
