@@ -102,13 +102,26 @@ TITAN allows the user to import either raw text files, which are generated durin
 
 <h3 size="-6">Visualization</h3>
 
-TITAN provides a thumbnail overview of all single-channel images within a given acquired IMC ROI, providing users the ability to assess staining easily and qualitatively. TITAN also allows for the visualization and overlay of up to seven false-coloured channels simultaneously for each ROI, which can be used to generate publication quality figures. An advantage of TITAN compared with MCD Viewer is that, with TITAN, the user is able to manually threshold images or perform automated colour scaling – a feature provided through 3D Slicer. These adjustments can be applied globally to the entire ROI, or locally based on a user-selected region of the ROI. This functionality allows users to optimize the brightness/contrast of multi-channel images interactively and conveniently. Furthermore, TITAN enables users to retain the adjustment parameters for a selected ROI and apply it to all other ROIs to achieve standardized and comparable visualizations across a dataset.
+TITAN provides a thumbnail overview of all single-channel images within a given acquired IMC ROI, providing users the ability to assess staining easily and qualitatively. TITAN also allows for the visualization and overlay of up to seven false-coloured channels simultaneously for each ROI, which can be used to generate publication quality figures. An advantage of TITAN compared with MCD Viewer is that, with TITAN, the user is able to manually threshold images or perform automated colour scaling – a feature provided through 3D Slicer. These adjustments can be applied globally to the entire ROI, or locally based on a user-selected region of the ROI. This functionality allows users to optimize the brightness/contrast of multi-channel images interactively and conveniently. Furthermore, TITAN enables users to retain the adjustment parameters for a selected ROI and apply it to all other ROIs to achieve standardized and comparable visualizations across a dataset, shown here:
+
+<div class="row">
+    <div class="col-sm my-3">
+        {% include figure.html path="assets/img/img_adjustment.png" title="image adjustment" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 <h3 size="-6">Segmentation</h3>
 
 Beyond visualization, IMC enables proteomic imaging at subcellular resolution, thus allowing for single cell-level phenotyping and characterization of tissues. Delineation and segmentation of individual cells within ROIs is a critical step in any IMC data analysis pipeline. In order to segment this nucleus channel, TITAN utilizes a watershed algorithm and morphological image processing to create the initial nucleus mask. When cell segmentation is complete, the total number of cells segmented within each ROI is reported, which is an essential variable for further analysis. Notably, TITAN generates cell masks for multiple ROIs simultaneously and efficiently.
 
- 
+ <div class="row">
+    <div class="col-sm my-3">
+        {% include figure.html path="assets/img/dna_channel.png" title="dna channel" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm my-3">
+        {% include figure.html path="assets/img/cell_mask" title="cell mask" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 <h3 size="6">Analysis</h3>
 
@@ -117,6 +130,12 @@ TITAN contains simple analysis functions including the generation of histograms,
 Following cell segmentation, cell-level mean intensities can be extracted from multi-channel data by calculating the mean intensity of each protein channel within each cell. TITAN is also then capable of exporting these data in spreadsheets, which can be used in external applications as well. This feature provides the user the flexibility to perform downstream analyses of single-cell data in their preferred program or in-house pipeline(s). 
 
 Using the scatter plots produced by TITAN, a manual gating function was implemented. This function allows users to manually gate cell populations based on the hierarchical expression proteins in a two-by-two manner, comparable to how hierarchical gating of cell flow cytometry data is performed. To gate, the user selects two channels for the scatter plot and selects the cells of interest. When the user creates the gated area, a new cell mask containing only the selected cells is displayed and the user has the option to continue gating the images into successive generations. TITAN’s gating feature will be familiar to users experienced with flow cytometry analysis and will enable manual identification and enumeration of cell populations based on marker expression.  
+
+<div class="row">
+    <div class="col-sm my-3">
+        {% include figure.html path="assets/img/gating.png" title="gating" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 
 <h2>Summary of Features</h2>
