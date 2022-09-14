@@ -68,15 +68,26 @@ TITAN uses several well-documented Python libraries including [Python Imaging Li
 
 <!-- To demonstrate the utility of TITAN’s features and evaluate its segmentation method, we used multiple, publicly available datasets. The [first dataset](https://www.nature.com/articles/s41586-019-1876-x) was collected from breast cancer patients the [second dataset](https://www.nature.com/articles/s41586-021-03475-6), used for further evaluation of the segmentation method, is of lung tissue obtained from COVD-19 patients. -->
 
+<div class="row">
+    <div class="col-sm-6 my-3">
+        TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
+    </div>
+    <div class="col-sm-6 my-3">
+        <ol>
+            <li>Visualization</li>
+            <li>Segmentation</li>
+            <li>Analysis</li>
+        </ol>
+    </div>
+</div>
 
-
-TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
+<!-- TITAN's functionality is divided into 3 main categories, following the natural order of analysis of IMC data:
 
 <ol>
     <li>Visualization</li>
     <li>Segmentation</li>
     <li>Analysis</li>
-</ol>
+</ol> -->
 
 <div class="row">
     <div class="col-sm mt-3">
