@@ -11,12 +11,12 @@ category: research
 </i>
 
 <div class="row">
-    <div class="col-sm mt-3">
+    <div class="col-sm mt-3" onClick="window.open('http://www.google.com','_blank');">
         {% include figure.html path="assets/img/eposter.png" title="eposter" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
-<img src="assets/img/eposter.png" class="img-fluid" alt="poster">
+<!-- <img src="assets/img/eposter.png" class="img-fluid" alt="poster"> -->
 
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
