@@ -21,7 +21,7 @@ category: research
 
 <h2>Convolutional Autoencoder Structure
 
-{% highlight python linenos %}
+{% highlight linenos %}
 
 x = Conv1D(16, 3, activation="relu", padding="same")(input_ae)
 x = Conv1D(16, 3, activation="relu", padding="same")(x)
@@ -30,6 +30,7 @@ x = Conv1D(32, 3, activation="relu", padding="same")(x)
 x = Conv1D(32, 3, activation="relu", padding="same")(x)
 x = Dropout(0.7)(x)
 encoded = MaxPooling1D()(x)
+
 x = Conv1D(32, 3, activation="relu", padding="same")(encoded)
 x = Conv1D(32, 3, activation="relu", padding="same")(x)
 x = UpSampling1D()(x)
@@ -41,6 +42,7 @@ decoded = Conv1D(1, 3, activation='sigmoid', padding='same', name='ae_out')(x)
 y = Flatten()(encoded)
 y = Dense(64, activation = 'relu')(y)
 y = Dense(24, activation = 'relu')(y)
+
 output_class = Dense(4, activation = 'softmax', name = "class_out")(y)
 
 {% endhighlight %}
