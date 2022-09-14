@@ -14,10 +14,11 @@ category: research
     <div class="col-sm mt-3" onClick="window.open('https://sindhurathiru.github.io/assets/pdf/example_pdf.pdf','_blank');">
         {% include figure.html path="assets/img/eposter.png" title="eposter" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="caption">
+        <i>(click image to open in new window)</i>
+    </div>
 </div>
 
-https://sindhurathiru.github.io/projects/4_project/assets/pdf/example_pdf.pdf
-<!-- <img src="assets/img/eposter.png" class="img-fluid" alt="poster"> -->
 
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
