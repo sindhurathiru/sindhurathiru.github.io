@@ -16,7 +16,7 @@ category: research
     </div>
 </div>
 
-
+<img src="assets/img/eposter.png" class="img-fluid" alt="poster">
 
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:

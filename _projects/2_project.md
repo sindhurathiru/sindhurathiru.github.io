@@ -100,7 +100,19 @@ Following cell segmentation, cell-level mean intensities can be extracted from m
 Using the scatter plots produced by TITAN, a manual gating function was implemented. This function allows users to manually gate cell populations based on the hierarchical expression proteins in a two-by-two manner, comparable to how hierarchical gating of cell flow cytometry data is performed. To gate, the user selects two channels for the scatter plot and selects the cells of interest. When the user creates the gated area, a new cell mask containing only the selected cells is displayed and the user has the option to continue gating the images into successive generations. TITAN’s gating feature will be familiar to users experienced with flow cytometry analysis and will enable manual identification and enumeration of cell populations based on marker expression.  
 
 
+<h2>Summary of Features</h2>
 
+<table>
+    <thead>
+        <tr>
+            <th rowspan="2" scope="col">Feature</th>
+            <th scope="col">My software</th>
+            <th colspan="3" scope="colgroup">Manufacturer Software</th>
+        </tr>
+        <tr>
+            <td colspan="1"></td>
+            <td scope="col">TITAN</td>
+            <td scope="col">MCD Viewer 
 
 
 
