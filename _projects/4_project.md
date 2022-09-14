@@ -11,7 +11,7 @@ category: research
 </i>
 
 <div class="row">
-    <div class="col-sm mt-3" onClick="window.open('https://sindhurathiru.github.io/assets/pdf/example_pdf.pdf','_blank');">
+    <div class="col-sm mt-3" onClick="window.open('https://sindhurathiru.github.io/assets/pdf/ePoster_v3.pdf','_blank');">
         {% include figure.html path="assets/img/eposter.png" title="eposter" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
