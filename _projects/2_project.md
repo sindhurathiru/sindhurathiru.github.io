@@ -107,7 +107,7 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
 <table>
     <thead>
         <tr>
-            <th rowspan="2" scope="col">Feature</th>
+            <th scope="col">Feature</th>
             <th scope="col">My software</th>
             <th colspan="3" scope="colgroup">Manufacturer Software</th>
         </tr>
