@@ -7,9 +7,14 @@ importance: 2
 category: research
 ---
 
+<i>This work was presented and published in [2022 44th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)](https://ieeexplore.ieee.org/abstract/document/9871071).
+</i>
 
-
-
+<div class="row">
+    <div class="col-sm mt-3">
+        {% include figure.html path="assets/img/eposter.png" title="eposter" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 
 
