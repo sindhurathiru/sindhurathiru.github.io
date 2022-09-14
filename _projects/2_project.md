@@ -104,7 +104,7 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
 
 <h2>Summary of Features</h2>
 
-<table>
+<table style="width:100%">
     <thead>
         <tr>
             <th scope="col">Feature</th>
