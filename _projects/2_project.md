@@ -107,12 +107,12 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
 <table style="width:100%">
     <thead>
         <tr>
-            <th scope="col">Feature</th>
+            <th rowspan="2" scope="col">Feature</th>
             <th scope="col">My software</th>
             <th colspan="3" scope="colgroup">Manufacturer Software</th>
         </tr>
         <tr>
-            <td></td>
+            <!-- <td></td> -->
             <td scope="col">TITAN</td>
             <td scope="col">MCD Viewer</td>
             <td scope="col">CellProfiler</td>
@@ -121,70 +121,70 @@ Using the scatter plots produced by TITAN, a manual gating function was implemen
     </thead>
     <tbody>
         <tr>
-            <td>Thumbnail view</td>
+            <td style="text-align:left">Thumbnail view</td>
             <td>X</td>
             <td>X</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>Image Visualization</td>
+            <td style="text-align:left">Image Visualization</td>
             <td>X</td>
             <td>X</td>
             <td></td>
             <td>X</td>
         </tr>
         <tr>
-            <td>Automated colour scaling</td>
+            <td style="text-align:left">Automated colour scaling</td>
             <td>X</td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>Reading of multi-channel text files</td>
+            <td style="text-align:left">Reading of multi-channel text files</td>
             <td>X</td>
             <td>X</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>Mask creation for all ROI at once</td>
+            <td style="text-align:left">Mask creation for all ROI at once</td>
             <td>X</td>
             <td></td>
             <td>X</td>
             <td></td>
         </tr>
         <tr>
-            <td>Basic mean intensity plots</td>
+            <td style="text-align:left">Basic mean intensity plots</td>
             <td>X</td>
             <td></td>
             <td></td>
             <td>X</td>
         </tr>
         <tr>
-            <td>Gating</td>
+            <td style="text-align:left">Gating</td>
             <td>X</td>
             <td></td>
             <td></td>
             <td>X</td>
         </tr>
         <tr>
-            <td>Dimensionality reduction</td>
+            <td style="text-align:left">Dimensionality reduction</td>
             <td>X</td>
             <td></td>
             <td></td>
             <td>X</td>
         </tr>
         <tr>
-            <td>Clustering functions</td>
+            <td style="text-align:left">Clustering functions</td>
             <td>X</td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>Export raw data of cell mean intensities</td>
+            <td style="text-align:left">Export raw data of cell mean intensities</td>
             <td>X</td>
             <td></td>
             <td></td>
