@@ -23,6 +23,10 @@ category: research
 
 {% highlight perldoc linenos %}
 
+nFeatures = x_train.shape[1]
+model = None
+input_ae = Input(shape=(nFeatures, 1))
+
 x = Conv1D(16, 3, activation="relu", padding="same")(input_ae)
 x = Conv1D(16, 3, activation="relu", padding="same")(x)
 x = MaxPooling1D()(x)
