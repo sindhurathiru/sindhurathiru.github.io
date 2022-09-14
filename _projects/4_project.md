@@ -21,7 +21,7 @@ category: research
 
 <h2>Convolutional Autoencoder Structure
 
-{% highlight linenos %}
+{% highlight perldoc linenos %}
 
 x = Conv1D(16, 3, activation="relu", padding="same")(input_ae)
 x = Conv1D(16, 3, activation="relu", padding="same")(x)
