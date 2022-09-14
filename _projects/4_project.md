@@ -11,7 +11,7 @@ category: research
 </i>
 
 <div class="row">
-    <div class="col-sm mt-3" onClick="window.open('http://www.google.com','_blank');">
+    <div class="col-sm mt-3" onClick="window.open('assets/pdf/example_pdf.pdf','_blank');">
         {% include figure.html path="assets/img/eposter.png" title="eposter" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
