@@ -119,7 +119,7 @@ Beyond visualization, IMC enables proteomic imaging at subcellular resolution, t
         {% include figure.html path="assets/img/dna_channel.png" title="dna channel" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm my-3">
-        {% include figure.html path="assets/img/cell_mask" title="cell mask" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/fig 2 cell mask.PNG" title="cell mask" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
