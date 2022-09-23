@@ -37,7 +37,7 @@ The model used is an autoencoder for an unsupervised approach in order to obtain
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/autoencoder.png" title="autoencoder" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/autoencoder.png" title="autoencoder" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -79,7 +79,7 @@ The autoencoder trained for 203 epochs and resulted in a validation loss of 0.06
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/barplot variance.png" title="boxplot" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/barplot variance.png" title="boxplot" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -89,7 +89,7 @@ The median percent error of the predicted data points for all features is 3.1\%.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/latentspace.png" title="boxplot" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/latentspace.png" title="boxplot" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
