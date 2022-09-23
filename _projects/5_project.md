@@ -79,7 +79,7 @@ The autoencoder trained for 203 epochs and resulted in a validation loss of 0.06
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/boxplot_variance.png" title="boxplot" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/barplot variance.png" title="boxplot" class="cover rounded z-depth-1" %}
     </div>
 </div>
 
