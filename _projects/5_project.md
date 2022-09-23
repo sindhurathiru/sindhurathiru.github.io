@@ -43,6 +43,32 @@ The model used is an autoencoder for an unsupervised approach in order to obtain
 
 Each layer of the autoencoder uses a ReLU activation function, with the final encoding and decoding layer using a linear and sigmoid activation function respectively. The network was trained using the Adam optimization function with a learning rate of 5e$^{-5}$. The mean squared error was calculated and back-propagated throughout training of the network. A latent space of dimension size 2 was used in order for optimal visualization of data results.
 
+{% highlight python linenos %}
+
+    adam = tf.keras.optimizers.Adam(learning_rate=0.00005)
+    bottleneck_size = 2 # number of dimensions to view latent space in; same as "code size"
+    input_data = Input(shape=(23,)) # number of columns
+
+    encoded = Dense(18, activation='relu')(input_data)
+    encoded = Dense(12, activation='relu')(encoded)
+    encoded = Dense(6, activation='relu')(encoded)
+    encoded = Dense(bottleneck_size, activation='linear')(encoded)
+    encoder = Model(input_data, encoded)
+
+    encoded_input = Input(shape=(bottleneck_size,))
+    decoded = Dense(6, activation='relu')(encoded_input)
+    decoded = Dense(12, activation='relu')(decoded)
+    decoded = Dense(18, activation='relu')(decoded)
+    decoded = Dense(23, activation='sigmoid')(decoded)
+    decoder = Model(encoded_input, decoded)
+
+    output_data = decoder(encoder(input_data))
+    ae = Model(input_data, output_data)
+    ae.compile(optimizer=adam, loss='binary_crossentropy') # using binary cross entropy since input values are in range [0,1]
+
+
+{% endhighlight %}
+
 <h2>Experiments</h2>
 
 The dataset was split into training and validation sets through random stratification based on cell type. SMOTE was then used to over-sample the training set in order to balance the classes for better model training. The autoencoder was trained on the training set while validating with the validation set. In an effort to prevent overfitting, early stopping with a patience of 10 was incorporated to halt model training based on the validation loss. The accuracy of the autoencoder reconstruction was evaluated and validated by visually analyzing the differences between the decoded data and the true data. Once validated, the latent space is thoroughly investigated to determine how the biopsy and cystectomy tissue samples compare between each other.
