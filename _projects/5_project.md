@@ -97,8 +97,17 @@ The data points are coloured based on whether they are cells found in the biopsy
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/latentspace2.png" title="boxplot" class="cover rounded z-depth-1" %}
+        {% include figure.html path="assets/img/latentspace1.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/latentspace2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/latentspace3.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Distribution of macrophages (left), CD8+ T cells (middle), CD4+ T cells (right).
 </div>
 
 Evidently, the distribution of macrophages and CD8+ T cells are very comparable between the biopsy and cystectomy tissue. Based on these findings, we can deduce that the protein expression of macrophages and CD8+ T cells in a patient's biopsy sample may be similar to their cystectomy sample. As mentioned earlier, CD8+ T cells have been linked to correlating with MIBC patients' prognosis. The similarity of CD8+ T cell expression between the biopsy and cystectomy tissues is promising and promotes the possibility of the biopsy CD8+ T cell information to be used as a surrogate of the cystectomy tissue. The distribution of CD4+ T cells has slight overlap although not as significant as the macrophages and CD8+ T cells. This likely indicates that CD4+ T cell expression in a biopsy sample may not be informative of the expected expression of these cells in the matched cystectomy sample. In the past, however, CD4+ T cell content has been shown to have an effect on survival in MIBC patients. Thus, it would be beneficial to investigate this further.
