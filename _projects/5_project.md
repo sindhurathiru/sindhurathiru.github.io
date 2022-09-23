@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: TME Comparison
+description: A qualitative evaluation of the tumour microenvironments between biopsy and cystectomy bladder cancer samples.
+img: assets/img/tme.jpg
 importance: 3
-category: fun
+category: machine learning
 ---
 
 Every project has a beautiful feature showcase page.
