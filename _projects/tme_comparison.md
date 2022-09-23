@@ -87,6 +87,8 @@ The median percent error of the predicted data points for all features is 3.1\%.
 
 <h2>Latent Space Evaluation</h2>
 
+<br>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/latentspace.png" title="boxplot" class="img-fluid rounded z-depth-1" %}
