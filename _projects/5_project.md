@@ -7,6 +7,22 @@ importance: 3
 category: machine learning
 ---
 
+<div class="row justify-content-sm-center" style="background-color: #fbf2fb">
+    <div class="col-sm-4 mt-3">
+        <h3 style="color: #b87bd0">Goal</h3>
+            <p style="color: #b87bd0">Conduct a preliminary analysis to demonstrate the application of machine learning in an automated pipeline to study the tumour microenvironment in matched biopsy and cystectomy bladder cancer tissue samples.</p>
+    </div>
+    <div class="col-sm-8 mt-3">
+        <h3 style="color: #b87bd0">Result</h3>
+            <p style="color: #b87bd0">The proteomic profiles of biopsy tissues seem to follow a very siimilar distribution as the matched cystectomy tissues. The similar expression profiles indicate the possibility for pathologists to deduce the same information obtained from a cystectomy sample, but from a biopsy sample instead. In doing so, clinicians would be able to administer proper treatment to the patient without having to wait for a cystectomy.</p>
+    </div>
+</div>
+
+
+
+
+
+
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
