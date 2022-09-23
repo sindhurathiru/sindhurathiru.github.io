@@ -4,7 +4,7 @@ title: Automating Cell Annotation
 description: Automated cell type annotation using a convolutional autoencoder.
 img: assets/img/cell-type.PNG
 importance: 2
-category: research
+category: machine learning
 ---
 
 <i>This work was presented and published in [2022 44th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)](https://ieeexplore.ieee.org/abstract/document/9871071).

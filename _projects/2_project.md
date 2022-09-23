@@ -4,7 +4,7 @@ title: TITAN
 description: Image processing & analysis software for IMC data
 img: assets/img/logo-v2.PNG
 importance: 3
-category: research
+category: software development
 ---
 
 <style>
