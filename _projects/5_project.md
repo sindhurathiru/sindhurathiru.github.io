@@ -2,7 +2,7 @@
 layout: page
 title: TME Comparison
 description: A qualitative evaluation of the tumour microenvironments between biopsy and cystectomy bladder cancer samples.
-img: assets/img/tme.jpg
+img: assets/img/autoencoder.png
 importance: 3
 category: machine learning
 ---
