@@ -2,7 +2,7 @@
 layout: page
 title: Automating Cell Annotation
 description: Automated cell type annotation using a convolutional autoencoder.
-img: assets/img/cell-type.PNG
+img: assets/img/architecture.png
 importance: 2
 category: machine learning
 ---
