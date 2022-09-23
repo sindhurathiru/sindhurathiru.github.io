@@ -41,7 +41,7 @@ The model used is an autoencoder for an unsupervised approach in order to obtain
     </div>
 </div>
 
-Each layer of the autoencoder uses a ReLU activation function, with the final encoding and decoding layer using a linear and sigmoid activation function respectively. The network was trained using the Adam optimization function with a learning rate of 5e$^{-5}$. The mean squared error was calculated and back-propagated throughout training of the network. A latent space of dimension size 2 was used in order for optimal visualization of data results.
+Each layer of the autoencoder uses a ReLU activation function, with the final encoding and decoding layer using a linear and sigmoid activation function respectively. The network was trained using the Adam optimization function with a learning rate of 5e<sup>-5</sup>. The mean squared error was calculated and back-propagated throughout training of the network. A latent space of dimension size 2 was used in order for optimal visualization of data results.
 
 {% highlight python linenos %}
 
