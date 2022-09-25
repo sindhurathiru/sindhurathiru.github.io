@@ -1,8 +1,8 @@
 ---
 layout: cv
-permalink: /assets/pdf/resume.pdf
+permalink: "/assets/pdf/Resume - Sindhura Thirumal.pdf"
 title: resume
 nav: true
 nav_order: 4
-cv_pdf: resume.pdf
+cv_pdf: "Resume - Sindhura Thirumal.pdf"
 ---
